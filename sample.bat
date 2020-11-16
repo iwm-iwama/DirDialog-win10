@@ -4,7 +4,7 @@ cls
 :R0
 	set rtn=
 
-	for /f "usebackq delims=" %%s in (`iwm_DirDialog.exe`) do set rtn=%%s
+	for /f "usebackq delims=" %%s in (`"iwm_DirDialog.exe"`) do set rtn=%%s
 
 	if "%rtn%"=="" goto :R9
 

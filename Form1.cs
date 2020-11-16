@@ -29,6 +29,7 @@ namespace iwm_DirDialog
 			{
 				return $"\"{fbd.SelectedPath}\"";
 			}
+
 			return "";
 		}
 	}
