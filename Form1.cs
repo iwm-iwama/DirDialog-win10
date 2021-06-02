@@ -5,7 +5,7 @@ namespace iwm_DirDialog
 {
 	public partial class Form1 : Form
 	{
-		private const string VER = "DirDialog iwm20201114";
+		private const string VERSION = "DirDialog iwm20210601";
 
 		public Form1()
 		{
@@ -14,16 +14,20 @@ namespace iwm_DirDialog
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			Text = VER;
+			Text = VERSION;
 			Pub.Rtn = RtnDirSelect();
 			Application.Exit();
 		}
 
 		private string RtnDirSelect()
 		{
-			FolderBrowserDialog fbd = folderBrowserDialog1;
-
-			fbd.SelectedPath = Environment.CurrentDirectory;
+			FolderBrowserDialog fbd = new FolderBrowserDialog
+			{
+				Description = "フォルダを指定してください。",
+				RootFolder = Environment.SpecialFolder.MyComputer,
+				SelectedPath = Environment.CurrentDirectory,
+				ShowNewFolderButton = true
+			};
 
 			if (fbd.ShowDialog(this) == DialogResult.OK)
 			{

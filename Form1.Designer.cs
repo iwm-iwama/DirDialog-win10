@@ -28,13 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
 			this.SuspendLayout();
-			// 
-			// folderBrowserDialog1
-			// 
-			this.folderBrowserDialog1.Description = "フォルダを指定してください。";
-			this.folderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.MyComputer;
 			// 
 			// Form1
 			// 
@@ -60,8 +54,6 @@
 		}
 
 		#endregion
-
-		private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
 	}
 }
 
